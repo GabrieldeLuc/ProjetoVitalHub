@@ -38,3 +38,14 @@ export const ButtonTitleClinica = styled.Text`
 export const TitleMedico = styled(Title) `
 margin-top: 60px;
 `
+export const TitleData = styled(Title) `
+margin-top: 60px; 
+` 
+
+export const TitleHorario = styled(Title) `
+
+margin-top: 30px; 
+font-size: 14px; 
+margin-left: -80px; 
+
+`

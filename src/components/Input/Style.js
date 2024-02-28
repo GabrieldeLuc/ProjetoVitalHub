@@ -24,3 +24,4 @@ export const InputCode = styled(Input)`
   font-size: 40px;
   margin-top: 20px;
 `;
+

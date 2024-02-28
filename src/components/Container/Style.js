@@ -62,13 +62,16 @@ export const ContainerSelClinica = styled(ContainerScroll)`
   width: 90%;
 `;
 export const ContainerIntScroll = styled.View`
-  width: 100%;  
-  align-items: center; 
+  width: 100%;
+  align-items: center;
 `;
 
-export const InverseBox = styled(BoxTitleHeader) `
-align-items: end; 
-padding: 0px; 
-`
-
-
+export const InverseBox = styled(BoxTitleHeader)`
+  align-items: end;
+  padding: 0px;
+`;
+export const ContainerInputHorario = styled.View`
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+`;

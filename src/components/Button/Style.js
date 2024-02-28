@@ -56,3 +56,13 @@ export const ButtonCancel = styled.TouchableOpacity`
 `;
 
 export const ButtonClinica = styled(Button)``;
+
+export const ButtonMedico = styled(Button)`
+  margin-top: 90px;
+`;
+
+export const ButtonDataConfirm = styled(Button) `
+
+margin-top: 40px; 
+
+`

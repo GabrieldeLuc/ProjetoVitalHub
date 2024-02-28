@@ -1,3 +1,4 @@
+import { Button, ButtonMedico, ButtonTitle } from "../../components/Button/Style";
 import { CardConsulta } from "../../components/Cards/Style";
 import { CardTitle, ImageConsulta } from "../../components/Consultas/Style";
 import {
@@ -5,6 +6,7 @@ import {
   ContainerIntScroll,
   ContainerSelClinica,
 } from "../../components/Container/Style";
+import { LinkAccount } from "../../components/ContextAccount/Style";
 import { BoxTitleHeader, SubTitleHeader } from "../../components/Header/Style";
 import { Title, TitleMedico } from "../../components/Title/Style";
 
@@ -43,6 +45,13 @@ export const SelecionarMedico = () => {
                 <SubTitleHeader>Clinico, Pediatra </SubTitleHeader>
             </BoxTitleHeader>
           </CardConsulta>
+
+       <ButtonMedico>
+        <ButtonTitle>Continuar</ButtonTitle>
+       </ButtonMedico>
+
+       <LinkAccount>Cancelar</LinkAccount>
+
         </ContainerIntScroll>
       </ContainerSelClinica>
     </Container>
