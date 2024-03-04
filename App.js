@@ -8,7 +8,7 @@ import { Home } from "./src/screens/Home/Home";
 
 import { CriarConta } from "./src/screens/CriarConta/CriarConta";
 import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
-import { VerifiqueSeuEmail} from "./src/screens/VerifiqueSeuEmail/VerifiqueSeuEmail";
+import { VerifiqueSeuEmail } from "./src/screens/VerifiqueSeuEmail/VerifiqueSeuEmail";
 import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
 
 //instância do StackNavigator
@@ -30,6 +30,8 @@ import {
 import { SelecionarClinica } from "./src/screens/SelecionarClinica/SelecionarClinica";
 import { SelecionarMedico } from "./src/screens/SelecionarMedico/SelecionarMedico";
 import { SelecionarData } from "./src/screens/SelecionarData/SelecionarData";
+import { LocalConsulta } from "./src/screens/LocalConsulta/LocalConsulta";
+import { VisualizarPrescricao } from "./src/screens/VisualizarPrescricao/VisualizarPrescricao";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -48,10 +50,8 @@ export default function App() {
   return (
     // envolve a estrutura da navegação
     <NavigationContainer>
-
       {/* componente para navegação */}
       <Stack.Navigator>
-
         {/* tela */}
         <Stack.Screen
           // nome da tela
@@ -115,6 +115,16 @@ export default function App() {
           name="SelecionarData"
           component={SelecionarData}
           options={{ title: "SelecionarData" }}
+        />
+        <Stack.Screen
+          name="LocalConsulta"
+          component={LocalConsulta}
+          options={{ title: "LocalConsulta" }}
+        />
+        <Stack.Screen
+          name="VisualizarPrescricao"
+          component={VisualizarPrescricao}
+          options={{ title: "VisualizarPrescricao" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
