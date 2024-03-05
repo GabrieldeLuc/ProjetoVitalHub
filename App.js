@@ -32,6 +32,7 @@ import { SelecionarMedico } from "./src/screens/SelecionarMedico/SelecionarMedic
 import { SelecionarData } from "./src/screens/SelecionarData/SelecionarData";
 import { LocalConsulta } from "./src/screens/LocalConsulta/LocalConsulta";
 import { VisualizarPrescricao } from "./src/screens/VisualizarPrescricao/VisualizarPrescricao";
+import { Main } from "./src/screens/Main/Main";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -53,14 +54,14 @@ export default function App() {
       {/* componente para navegação */}
       <Stack.Navigator>
         {/* tela */}
-        <Stack.Screen
+        {/* <Stack.Screen
           // nome da tela
           name="Navegacao"
           //componente que será chamado
           component={Navegacao}
           //título da tela
           options={{ title: "Navegação" }}
-        />
+        /> */}
 
         <Stack.Screen
           // nome da tela
@@ -70,6 +71,8 @@ export default function App() {
           //título da tela
           options={{ title: "Login" }}
         />
+
+        <Stack.Screen name="Main" component={Main} />
 
         <Stack.Screen
           name="Recuperar Senha"

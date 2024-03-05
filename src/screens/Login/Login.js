@@ -11,7 +11,12 @@ import { Title } from "../../components/Title/Style";
 import { AntDesign } from "@expo/vector-icons";
 import { ContentAccount, TextAccount } from "./Style";
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
+
+  async function Login() {
+    navigation.navigate("Main");
+  }
+
   return (
     <Container>
       <Logo source={require("../../assets/logo.png")} />
@@ -24,7 +29,7 @@ export const Login = () => {
 
       <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
-      <Button>
+      <Button onPress={() => Login()}>
         <ButtonTitle>Entrar</ButtonTitle>
       </Button>
 

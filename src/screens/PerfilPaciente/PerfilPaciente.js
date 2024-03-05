@@ -4,21 +4,26 @@ import {
   ContainerImage,
   ContainerScroll,
 } from "../../components/Container/Style";
-import { ProfileImageLarge } from "../../components/ProfileImage/Style";
+
 import { Title, Subtitle } from "../../components/Title/Style";
 import { Button, ButtonLogout } from "../../components/Button/Style";
 import { ButtonTitle } from "../../components/ButtonTitle/Style";
-import { Label, LabelSmall } from "../../components/Label/Style";
+
 import { Input, InputSmall } from "../../components/Input/Style";
 import { ContentInputSmall } from "./Style";
+import { Text } from "react-native";
+import { ProfileImage } from "../../components/AppointmentCard/Style";
 
-const PerfilPaciente = () => {
+export const PerfilPaciente = () => {
 
   return (
     <ContainerScroll>
+
+    
+
       <Container>
         <ContainerImage>
-          <ProfileImageLarge
+          <ProfileImage
             source={{ uri: "https://github.com/enzoquarelo.png" }}
           />
         </ContainerImage>
@@ -27,25 +32,15 @@ const PerfilPaciente = () => {
 
         <Subtitle>22 anos enzo.quarelo@gmail.com</Subtitle>
 
-        <Label>Data de nascimento</Label>
         <Input placeholder="dd/mm/aaaa" />
 
-        <Label>CPF</Label>
         <Input placeholder="879********" />
 
-        <Label>Endereço</Label>
+      
         <Input placeholder="Rua Niterói,180" />
 
         <ContainerFlex>
-          <ContentInputSmall>
-            <LabelSmall>Cep</LabelSmall>
-            <InputSmall placeholder="09330-098" />
-          </ContentInputSmall>
-
-          <ContentInputSmall>
-            <LabelSmall>Cidade</LabelSmall>
-            <InputSmall placeholder="SCS - SP" />
-          </ContentInputSmall>
+       
         </ContainerFlex>
 
         <Button>
