@@ -13,6 +13,8 @@ import { Input, InputSmall } from "../../components/Input/Style";
 import { ContentInputSmall } from "./Style";
 import { Text } from "react-native";
 import { ProfileImage } from "../../components/AppointmentCard/Style";
+import { ImageUser } from "../../components/Header/Style";
+import { ImageDoutor, ImagePerfil } from "../../components/Images/Style";
 
 export const PerfilPaciente = () => {
 
@@ -23,21 +25,21 @@ export const PerfilPaciente = () => {
 
       <Container>
         <ContainerImage>
-          <ProfileImage
-            source={{ uri: "https://github.com/enzoquarelo.png" }}
+          <ImagePerfil
+            source={require('../../assets/Moai.jpg')}
           />
         </ContainerImage>
 
-        <Title>Dr.Enzo Quarelo</Title>
+        <Title>Dr.Moai</Title>
 
-        <Subtitle>22 anos enzo.quarelo@gmail.com</Subtitle>
+         <Subtitle>16 anos doutor.moai@gmail.com</Subtitle>
 
-        <Input placeholder="dd/mm/aaaa" />
+         <Input placeholder="dd/mm/aaaa" />
 
-        <Input placeholder="879********" />
+       <Input placeholder="879********" />
 
       
-        <Input placeholder="Rua Niterói,180" />
+        {/* <Input placeholder="Rua Niterói,180" />
 
         <ContainerFlex>
        
@@ -53,7 +55,7 @@ export const PerfilPaciente = () => {
 
         <ButtonLogout onPress={() => {removerLogin()}}>
           <ButtonTitle>Sair do app</ButtonTitle>
-        </ButtonLogout>
+        </ButtonLogout> */}   
       </Container>
     </ContainerScroll>
   );

@@ -8,6 +8,6 @@ export const ContentLogo = styled.View`
   align-items: center;
   margin-top: 20px;
   
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: #bfe8eb;
 `;

@@ -27,14 +27,12 @@ export const NameUser = styled.Text`
   font-family: "MontserratAlternates_600SemiBold";
 `;
 
-export const BoxTitleHeader = styled.View `
+export const BoxTitleHeader = styled.View`
+  padding: 15px;
+`;
 
-padding: 15px; 
-
-`
-
-export const SubTitleHeader = styled.Text `
-font-size: 14px; 
-font-family: "Quicksand_500Medium";
-color: #4e4b59; 
-`
+export const SubTitleHeader = styled.Text`
+  font-size: 14px;
+  font-family: "Quicksand_500Medium";
+  color: #4e4b59;
+`;

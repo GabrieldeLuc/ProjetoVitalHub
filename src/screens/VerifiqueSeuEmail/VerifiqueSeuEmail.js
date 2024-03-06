@@ -9,7 +9,14 @@ import { Button, ButtonSecondary, ButtonTitle } from "../../components/Button/St
 import { ButtonSecondaryTitle } from "../../components/ButtonTitle/Style";
 import { InputCode } from "../../components/Input/Style";
 
-export const VerifiqueSeuEmail = () => {
+export const VerifiqueSeuEmail =({ navigation }) => {
+
+  async function RedefinirSenha() {
+    navigation.navigate("Redefinir Senha");
+  }
+
+
+
   return (
     <Container>
       <ContainerLogo>
@@ -37,7 +44,7 @@ export const VerifiqueSeuEmail = () => {
         <InputCode keyboardType="numeric" placeholder="0" maxLength={1}/>
       </ContainerBox>
 
-      <Button onPress={() => {}}>
+      <Button onPress={() => RedefinirSenha()}>
         <ButtonTitle>Entrar</ButtonTitle>
       </Button>
  

@@ -7,7 +7,13 @@ import { Subtitle, Title } from "../../components/Title/Style";
 import { Input } from "../../components/Input/Style";
 import { Button, ButtonTitle } from "../../components/Button/Style";
 
-export const RecuperarSenha = () => {
+export const RecuperarSenha = ({ navigation }) => {
+
+  async function RecuperarSenha() {
+    navigation.navigate("Verifique seu e-mail");
+  }
+
+
   return (
     <Container>
       <ContainerLogo>
@@ -32,7 +38,7 @@ export const RecuperarSenha = () => {
 
       <Input placeholder="Usuário ou E-mail" />
 
-      <Button onPress={() => {}}>
+      <Button onPress={() => RecuperarSenha()}>
         <ButtonTitle>Continuar</ButtonTitle>
       </Button>
     </Container>
