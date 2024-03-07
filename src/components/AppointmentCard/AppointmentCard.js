@@ -15,6 +15,7 @@ import {
 } from "./Style";
 
 export const AppointmentCard = ({
+  navigation, 
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
@@ -23,7 +24,11 @@ export const AppointmentCard = ({
     // container principal
     <ContainerCardsList>
       {/* imagem de perfil */}
-      <ProfileImage source={{ uri: "https://avatars.githubusercontent.com/u/125310404?v=4" }} />
+      <ProfileImage
+        source={{
+          uri: "https://avatars.githubusercontent.com/u/125310404?v=4",
+        }}
+      />
 
       {/* conteúdo ao lado da imagem de perfil */}
       <ContentCard>
@@ -49,24 +54,19 @@ export const AppointmentCard = ({
             </TextBold>
           </ClockCard>
 
-            {/* valida e mostra o tipo de botão conforme a situação */}
+          {/* valida e mostra o tipo de botão conforme a situação */}
 
-            {
-                situacao == "cancelado" ? (
-                    <>
-                    </>
-                ) : situacao == "pendente" ? (
-                    <ButtonCard onPress={onPressCancel}>
-                        <ButtonText situacao={situacao}>Cancelar</ButtonText>
-                    </ButtonCard>
-                ) : (
-                    <ButtonCard onPress={onPressAppointment}>
-                        <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
-                    </ButtonCard>
-                )
-            }
-
-          
+          {situacao == "cancelado" ? (
+            <></>
+          ) : situacao == "pendente" ? (
+            <ButtonCard onPress={onPressCancel}>
+              <ButtonText situacao={situacao}>Cancelar</ButtonText>
+            </ButtonCard>
+          ) : (
+            <ButtonCard onPress={onPressAppointment}>
+              <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
+            </ButtonCard>
+          )}
         </ViewRow>
       </ContentCard>
     </ContainerCardsList>
