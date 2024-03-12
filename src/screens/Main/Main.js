@@ -1,56 +1,55 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../Home/Home";
 import PerfilDoutor from "../PerfilDoutor/PerfilDoutor";
-import { ContentIcon, TextIcon } from "./Style";
+import { ContainerIcons, ContentIcon, TextIcon, TextTabBottom } from "./Style";
 
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-
-const BottomTab = createBottomTabNavigator();
+import { MedicoConsulta } from "../MedicoConsulta/MedicoConsulta";
+import { FontAwesome6 } from "@expo/vector-icons";
+import { useState } from "react";
+import { PerfilPaciente } from "../PerfilPaciente/PerfilPaciente";
 
 export const Main = () => {
+  const Tab = createBottomTabNavigator();
+
   return (
-    <BottomTab.Navigator
-      initialRouteName="Home"
-      screenOptions={({ route }) => ({
-        tabBarStyle: {
-          backgroundColor: "#FFFFFF",
-          height: 80,
-          paddingTop: 10,
-          paddingBottom: 10,
-        },
-        tabBarActiveBackgroundColor: "transparent",
-        tabBarShowLabel: false,
-        headerShown: false,
-        tabBarIcon: ({ focused }) => {
-          if (route.name === "Home") {
+    <>
+      <Tab.Navigator
+        initialRouteName="Home"
+        screenOptions={({ route, iconName, color, text, background }) => ({
+          tabBarStyle: {
+            backgroundColor: "white",
+          },
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarIcon: ({ focused }) => {
+            if (route.name === "Home") {
+              iconName = "calendar-check";
+              color = focused ? "#607EC5" : "#4E4B59";
+              background = focused ? "#ECF2FF" : "white";
+              text = focused ? "Home" : "";
+            } else if (route.name === "Perfil") {
+              iconName = "user-large";
+              color = focused ? "#607EC5" : "#4E4B59";
+              background = focused ? "#ECF2FF" : "white";
+              text = focused ? "Perfil" : "";
+            }
+
             return (
-              <ContentIcon
-                tabBarActiveBackgroundColor={
-                  focused ? "#ECF2FF" : "transparent"
-                }
-              >
-                <FontAwesome name="calendar" size={24} color="black" />
-
-                {focused && <TextIcon>Agenda</TextIcon>}
-              </ContentIcon>
+              <ContainerIcons style={{ backgroundColor: background }}>
+                <FontAwesome6 name={iconName} size={18} color={color} />
+                <TextTabBottom style={{ color: color }}>{text}</TextTabBottom>
+              </ContainerIcons>
             );
-          } else {
-            return(
-            <ContentIcon
-              tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
-            >
-              <FontAwesome5 name="user-circle" size={24} color="black" />
-
-              {focused && <TextIcon>Perfil</TextIcon>}
-            </ContentIcon>
-            );
-          }
-        },
-      })}
-    >
-      <BottomTab.Screen name="Home" component={Home} />
-      <BottomTab.Screen name="Perfil" component={PerfilDoutor} />
-    </BottomTab.Navigator>
+          },
+          tabBarActiveTintColor: "#607EC5",
+          headerShown: false,
+        })}
+      >
+        <Tab.Screen name="Home" component={MedicoConsulta} />
+        <Tab.Screen name="Perfil" component={PerfilDoutor} />
+      </Tab.Navigator>
+    </>
   );
 };

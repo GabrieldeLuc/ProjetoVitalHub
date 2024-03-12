@@ -11,3 +11,9 @@ export const LinkAccount = styled(TextAccount)`
   color: #4d659d;
   padding-bottom: 20px;
 `;
+
+export const ContentAccount = styled.TouchableOpacity`
+  width: 284px;
+  height: 40px;
+  margin-top: 20px;
+`;

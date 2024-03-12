@@ -64,8 +64,14 @@ export const TitleNumero = styled(TitleEndereco)`
   margin-top: 40px;
 `;
 
-export const TitleBairro = styled(TitleEndereco) `
-
-margin-right: -80px; 
-margin-top: -78px; 
-`
+export const TitleBairro = styled(TitleEndereco)`
+  margin-right: -80px;
+  margin-top: -78px;
+`;
+export const SimpleText = styled.Text`
+  font-size: 16px;
+  font-family: "Quicksand_500Medium";
+  width: 90%;
+  text-align: center;
+  margin-top: 15px;
+`;
