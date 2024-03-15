@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.TouchableOpacity`
   width: 90%;
@@ -61,8 +61,33 @@ export const ButtonMedico = styled(Button)`
   margin-top: 90px;
 `;
 
-export const ButtonDataConfirm = styled(Button) `
+export const ButtonDataConfirm = styled(Button)`
+  margin-top: 40px;
+`;
 
-margin-top: 40px; 
+export const CheckBox = styled.TouchableHighlight.attrs({
+  underlayColor: "transparent",
+})`
+  width: 88px;
+  height: 40px;
+  border: 2px solid #49b3ba;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  ${(props) =>
+    props.clickButton
+      ? css`
+          background-color: #49b3ba;
+        `
+      : css`
+          background-color: #fff;
+        `}
+`;
+
+export const ButtonTi = styled(ButtonTitle)``;
+
+export const ButtonContinuarConsulta = styled(Button) `
+
+margin-top: 130px; 
 
 `

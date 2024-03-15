@@ -1,15 +1,39 @@
 import { ButtonCard } from "../AppointmentCard/Style";
-import { Button, ButtonCancel, ButtonTitle } from "../Button/Style";
-import { ContentAccount, LinkAccount } from "../ContextAccount/Style";
-import { SimpleText, Title } from "../Title/Style";
 import {
-    BoxModalAgendar,
+  Button,
+  ButtonCancel,
+  ButtonContinuarConsulta,
+  ButtonTi,
+  ButtonTitle,
+  CheckBox,
+} from "../Button/Style";
+import {
+  ContainerCheck,
+  ContainerInputProntuario,
+  ContainerTopicoAgendamento,
+} from "../Container/Style";
+import { ContentAccount, LinkAccount } from "../ContextAccount/Style";
+import { SubTitleHeader } from "../Header/Style";
+import { Input } from "../Input/Style";
+import {
+  SimpleText,
+  TextCheckbox,
+  TextSemiBold,
+  Title,
+  TitleAgendar,
+} from "../Title/Style";
+import {
+  BoxModalAgendamento,
+  BoxModalAgendar,
   BoxModalCancelar,
   BoxModalProntuario,
+  DadosAgendamento,
   ImagePaciente,
   ModalBackground,
+  TextAgendar,
   TextModalProntuario,
 } from "./Style";
+import { css } from "styled-components";
 
 export const ModalCancelar = ({ navigation }) => {
   return (
@@ -23,7 +47,7 @@ export const ModalCancelar = ({ navigation }) => {
         </SimpleText>
 
         <Button>
-          <ButtonTitle>confirmar</ButtonTitle>
+          <ButtonTitle>Confirmar</ButtonTitle>
         </Button>
 
         <ButtonCancel screen={`Main`} navigation={navigation} />
@@ -44,7 +68,7 @@ export const ModalConsulta = ({ navigation }) => {
           <TextModalProntuario>Cliníco geral CRM-15286</TextModalProntuario>
 
           <Button>
-            <ButtonTitle>Ver local da consulta</ButtonTitle>
+            <ButtonTi>Ver local da consulta</ButtonTi>
           </Button>
 
           <ContentAccount>
@@ -56,11 +80,57 @@ export const ModalConsulta = ({ navigation }) => {
   );
 };
 
+export const ModalAgendamento = ({ navigation }) => {
+  return (
+    <ModalBackground>
+      <BoxModalAgendamento>
+        <TitleAgendar>Agendar Consulta</TitleAgendar>
+
+        <SimpleText>
+          Consulte os Dados selecionados para a sua Consulta
+        </SimpleText>
+
+        <ContainerTopicoAgendamento>
+          <DadosAgendamento>
+            <TextSemiBold>Data da Consulta</TextSemiBold>
+            <SubTitleHeader>21 de Março de 2024</SubTitleHeader>
+          </DadosAgendamento>
+
+          <DadosAgendamento>
+            <TextSemiBold>Médico(a) da Consulta</TextSemiBold>
+            <SubTitleHeader>Dra Alessandra</SubTitleHeader>
+            <SubTitleHeader>Demartologa, Esteticista</SubTitleHeader>
+          </DadosAgendamento>
+
+          <DadosAgendamento>
+            <TextSemiBold>Local da consulta</TextSemiBold>
+            <SubTitleHeader>São Paulo, SP</SubTitleHeader>
+          </DadosAgendamento>
+
+          <DadosAgendamento>
+            <TextSemiBold>Tipo da Consulta</TextSemiBold>
+            <SubTitleHeader>Rotina</SubTitleHeader>
+          </DadosAgendamento>
+        </ContainerTopicoAgendamento>
+
+        <Button onPress={() => navigation.replace(`Main`)}>
+          <ButtonTitle>confirmar</ButtonTitle>
+        </Button>
+
+        <LinkAccount onPress={() => navigation.replace("Main")}>
+          Cancelar
+        </LinkAccount>
+      </BoxModalAgendamento>
+    </ModalBackground>
+  );
+};
+
 export const ModalAgendarConsulta = ({ navigation }) => {
   return (
     <ModalBackground>
       <BoxModalAgendar>
         <ContainerInputProntuario>
+          <Title>Agendar Consulta</Title>
           <TextAgendar>Qual o nível da consulta</TextAgendar>
           <ContainerCheck>
             <CheckBox>
@@ -80,11 +150,15 @@ export const ModalAgendarConsulta = ({ navigation }) => {
           <Input placeholder="Informe a localização" />
         </ContainerInputProntuario>
 
-        <Button onPress={() => navigation.navigate("SelecionarClinica")}>
-          <ButtonTitle>continuar</ButtonTitle>
-        </Button>
+        <ButtonContinuarConsulta
+          onPress={() => navigation.navigate("SelecionarClinica")}
+        >
+          <ButtonTi>Continuar</ButtonTi>
+        </ButtonContinuarConsulta>
 
-        <ButtonCancel navigation={navigation} screen={`Main`} />
+        <LinkAccount onPress={() => navigation.replace("Main")}>
+          Cancelar
+        </LinkAccount>
       </BoxModalAgendar>
     </ModalBackground>
   );

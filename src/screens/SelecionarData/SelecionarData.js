@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Button,
   ButtonDataConfirm,
@@ -15,25 +16,34 @@ import {
 import { LinkAccount } from "../../components/ContextAccount/Style";
 import InputSelect from "../../components/InputSelect/InputSelect";
 import { Title, TitleData, TitleHorario } from "../../components/Title/Style";
+import { ModalAgendamento } from "../../components/Modal/Modal";
 
-export const SelecionarData = () => {
+export const SelecionarData = ({ navigation }) => {
+  const [modalAgendar, setModalAgendar] = useState(false);
+
   return (
-    <Container>
-      <TitleData>Selecionar Data</TitleData>
+    <>
+      <Container>
+        <TitleData>Selecionar Data</TitleData>
 
-      <CalendarData />
+        <CalendarData />
 
-      <TitleHorario>Selecione um horário disponível</TitleHorario>
+        <TitleHorario>Selecione um horário disponível</TitleHorario>
 
-      <ContainerInputHorario>
-        <InputSelect />
-      </ContainerInputHorario>
+        <ContainerInputHorario>
+          <InputSelect />
+        </ContainerInputHorario>
 
-      <ButtonDataConfirm>
-        <ButtonTitle>Confirmar</ButtonTitle>
-      </ButtonDataConfirm>
+        <ButtonDataConfirm onPress={() => setModalAgendar(true)}>
+          <ButtonTitle>Confirmar</ButtonTitle>
+        </ButtonDataConfirm>
 
-      <LinkAccount>Cancelar</LinkAccount>
-    </Container>
+        <LinkAccount onPress={() => navigation.replace("Main")}>
+          Cancelar
+        </LinkAccount>
+      </Container>
+
+      {modalAgendar ? <ModalAgendamento navigation={navigation} /> : null}
+    </>
   );
 };

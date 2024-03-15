@@ -47,7 +47,7 @@ export const Main = () => {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="Home" component={MedicoConsulta} />
+        <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Perfil" component={PerfilDoutor} />
       </Tab.Navigator>
     </>

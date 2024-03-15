@@ -75,3 +75,19 @@ export const SimpleText = styled.Text`
   text-align: center;
   margin-top: 15px;
 `;
+
+export const TextCheckbox = styled(ButtonTitleClinica)`
+  color: #34898f;
+  text-transform: none;
+  text-align: center;
+  background-color: transparent;
+`;
+
+export const TextSemiBold = styled(SimpleText)`
+  font-family: "Quicksand_600SemiBold";
+  text-align: left;
+`;
+
+export const TitleAgendar = styled(Title)`
+  margin-top: 50px;
+`;

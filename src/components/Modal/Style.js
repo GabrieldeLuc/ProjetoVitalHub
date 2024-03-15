@@ -54,7 +54,7 @@ export const BoxModalAgendamento = styled(BoxModalProntuario)`
 `;
 
 // Box de Dados do Agendamento
-export const DadosAgedamento = styled.View`
+export const DadosAgendamento = styled.View`
   padding: 5px;
   height: fit-content;
 `;
@@ -66,3 +66,4 @@ export const BoxLocalizacao = styled(BoxModalAgendar)`
   z-index: 12;
   height: 349px;
 `;
+

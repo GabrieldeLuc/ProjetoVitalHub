@@ -75,3 +75,22 @@ export const ContainerInputHorario = styled.View`
   width: 100%;
   margin-top: 24px;
 `;
+
+export const ContainerInputProntuario = styled.View`
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+`;
+
+export const ContainerCheck = styled.View`
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ContainerTopicoAgendamento = styled.View`
+  align-items: start;
+  width: 90%;
+  height: fit-content;
+`;

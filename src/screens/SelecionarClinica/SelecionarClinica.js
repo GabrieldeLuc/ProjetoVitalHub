@@ -1,15 +1,29 @@
 import { Button } from "react-native";
 import { AtendimentoHorario, CardClinica } from "../../components/Cards/Style";
 import { CardTitle } from "../../components/Consultas/Style";
-import { Container, ContainerIntScroll, ContainerSelClinica, InverseBox } from "../../components/Container/Style";
+import {
+  Container,
+  ContainerIntScroll,
+  ContainerSelClinica,
+  InverseBox,
+} from "../../components/Container/Style";
 import { BoxTitleHeader, SubTitleHeader } from "../../components/Header/Style";
-import { ButtonTitleClinica, TextNote, Title, TitleClinica } from "../../components/Title/Style";
+import {
+  ButtonTitleClinica,
+  TextNote,
+  Title,
+  TitleClinica,
+} from "../../components/Title/Style";
 import { AntDesign } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { LinkAccount } from "../../components/ContextAccount/Style";
 import { ButtonClinica } from "../../components/Button/Style";
 
-export const SelecionarClinica = () => {
+export const SelecionarClinica = ({ navigation }) => {
+  async function Continuar() {
+    navigation.navigate("SelecionarMedico");
+  }
+
   return (
     <Container>
       <ContainerSelClinica>
@@ -210,10 +224,12 @@ export const SelecionarClinica = () => {
         </ContainerIntScroll>
       </ContainerSelClinica>
 
-      <ButtonClinica>
+      <ButtonClinica onPress={() => Continuar()}>
         <ButtonTitleClinica>Continuar</ButtonTitleClinica>
-        </ButtonClinica>
-      <LinkAccount>Cancelar</LinkAccount>
+      </ButtonClinica>
+      <LinkAccount onPress={() => navigation.replace("Main")}>
+        Cancelar
+      </LinkAccount>
     </Container>
   );
 };
