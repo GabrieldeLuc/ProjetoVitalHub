@@ -9,6 +9,7 @@ import { MedicoConsulta } from "../MedicoConsulta/MedicoConsulta";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { useState } from "react";
 import { PerfilPaciente } from "../PerfilPaciente/PerfilPaciente";
+import { PacienteConsulta } from "../PacienteConsulta/PacienteConsulta";
 
 export const Main = () => {
   const Tab = createBottomTabNavigator();
@@ -47,7 +48,7 @@ export const Main = () => {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Home" component={PacienteConsulta} />
         <Tab.Screen name="Perfil" component={PerfilDoutor} />
       </Tab.Navigator>
     </>

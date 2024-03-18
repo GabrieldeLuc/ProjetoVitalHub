@@ -44,3 +44,23 @@ export const InputNumero = styled(InputEndereco)`
 export const InputBairro = styled(InputNumero)`
   margin-left: 190px;
 `;
+
+export const InputMaior = styled(Input)`
+  padding-top: 2px;
+  height: 121px;
+`;
+
+export const InputMaiorDisabled = styled(InputMaior).attrs({
+  placeholderTextColor: "#4E4B59",
+})`
+  border: 1px solid #f5f3f3;
+  background-color: #f5f3f3;
+  text-align: justify;
+`;
+
+export const InputDisabled = styled(Input).attrs({
+  placeholderTextColor: "#4E4B59",
+})`
+  border: 1px solid #f5f3f3;
+  background-color: #f5f3f3;
+`;

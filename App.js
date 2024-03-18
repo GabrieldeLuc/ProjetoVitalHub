@@ -33,6 +33,7 @@ import { LocalConsulta } from "./src/screens/LocalConsulta/LocalConsulta";
 import { VisualizarPrescricao } from "./src/screens/VisualizarPrescricao/VisualizarPrescricao";
 import { Main } from "./src/screens/Main/Main";
 import { ProntuarioMedico } from "./src/screens/ProntuarioMedico/ProntuarioMedico";
+import { MedicoConsulta } from "./src/screens/MedicoConsulta/MedicoConsulta";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -133,6 +134,11 @@ export default function App() {
           name="Prontuario Medico"
           component={ProntuarioMedico}
           options={{ title: "Prontuario Medico" }}
+        />
+        <Stack.Screen
+          name="MedicoConsulta"
+          component={MedicoConsulta}
+          options={{ title: "MedicoConsulta" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

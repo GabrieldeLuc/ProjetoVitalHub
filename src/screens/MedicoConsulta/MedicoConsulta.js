@@ -1,6 +1,6 @@
 import { StatusBar } from "react-native";
 import { Container } from "../../components/Container/Style";
-import { Header } from "react-native/Libraries/NewAppScreen";
+
 import { Calendar } from "react-native-calendars";
 import { useState } from "react";
 import { Situacao } from "../../components/Consultas/Consultas";
@@ -10,6 +10,7 @@ import {
   ContainerButtonAgendar,
 } from "../../components/ButtonIcons/Style";
 import { ModalAgendarConsulta } from "../../components/Modal/Modal";
+import { Header } from "../../components/Header/Header";
 
 export const MedicoConsulta = ({ navigation }) => {
   const [situacao, setSituacao] = useState();
@@ -27,7 +28,7 @@ export const MedicoConsulta = ({ navigation }) => {
         translucent={true}
       />
 
-      <Header />
+      <Header/>
 
       <Calendar />
 

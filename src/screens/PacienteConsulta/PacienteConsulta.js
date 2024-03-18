@@ -1,7 +1,14 @@
 import { StatusBar } from "react-native";
 import { Container } from "../../components/Container/Style";
-import { Header } from "react-native/Libraries/NewAppScreen";
+
 import { Calendar } from "react-native-calendars";
+import { useState } from "react";
+import { Header } from "../../components/Header/Header";
+import { Situacao } from "../../components/Consultas/Consultas";
+import { Cards } from "../../components/Cards/Cards";
+import { ButtonAgendar, ContainerButtonAgendar } from "../../components/ButtonIcons/Style";
+import { ModalAgendarConsulta } from "../../components/Modal/Modal";
+
 
 export const PacienteConsulta = () => {
     const [showAgendar, setShowAgendar] = useState(false);
@@ -10,16 +17,16 @@ export const PacienteConsulta = () => {
       <Container>
         <StatusBar backgroundColor={"transparent"} barStyle={"dark-content"} translucent={true} />
   
-        <Header />
+        <Header/>
   
         <Calendar />
   
-        {/* <Situacao situacao={state} setSituacao={setState} />
+      <Situacao situacao={state} setSituacao={setState} />
   
         <Cards situacao={state} />
   
         <ContainerButtonAgendar onPress={() => {setShowAgendar(true)}}>
-          <ButtonAgendar source={require("../../assets/Agendar.png")} />
+          <ButtonAgendar source={require("../../assets/agendar.png")} />
         </ContainerButtonAgendar>
   
         {
@@ -28,7 +35,7 @@ export const PacienteConsulta = () => {
               setModal={setShowAgendar}
             /> 
           : null
-        } */}
+        } 
       </Container>
     );
   };

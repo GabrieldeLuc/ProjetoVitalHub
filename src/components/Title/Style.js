@@ -91,3 +91,7 @@ export const TextSemiBold = styled(SimpleText)`
 export const TitleAgendar = styled(Title)`
   margin-top: 50px;
 `;
+
+export const TitleLabel = styled(SimpleText)`
+  text-align: left;
+`;

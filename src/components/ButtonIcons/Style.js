@@ -16,8 +16,19 @@ export const ContainerButtonAgendar = styled(ContainerButtonIcon)`
   right: 0;
   left: none;
 `;
+export const ContainerButtonPerfil = styled(ContainerButtonIcon)`
+  bottom: 0;
+  right: 0;
+  left: none;
+`;
 
 export const ButtonAgendar = styled(ButtonIcon)`
   width: 60px;
   height: 60px;
+`;
+
+export const ButtonPerfil = styled(ButtonAgendar) `
+
+border-radius: 5px; 
+
 `;

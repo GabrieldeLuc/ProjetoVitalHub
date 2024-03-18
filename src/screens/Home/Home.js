@@ -18,7 +18,7 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
-export const Home = ({navigation}) => {
+export const Home = ({ navigation }) => {
   const [statusLista, setStatusLista] = useState("pendente");
 
   // Satate para os modais
@@ -83,7 +83,7 @@ export const Home = ({navigation}) => {
       />
 
       <AppointmentModal
-      navigation={navigation}
+        navigation={navigation}
         visible={showModalAppointment}
         setShowModalAppointment={setShowModalAppointment}
       />
