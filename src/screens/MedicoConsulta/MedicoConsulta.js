@@ -11,6 +11,7 @@ import {
 } from "../../components/ButtonIcons/Style";
 import { ModalAgendarConsulta } from "../../components/Modal/Modal";
 import { Header } from "../../components/Header/Header";
+import { CalendarHome } from "../../components/CalendarHome/CalendarHome";
 
 export const MedicoConsulta = ({ navigation }) => {
   const [situacao, setSituacao] = useState();
@@ -30,7 +31,7 @@ export const MedicoConsulta = ({ navigation }) => {
 
       <Header/>
 
-      <Calendar />
+      <CalendarHome />
 
       <Situacao situacao={situacao} setSituacao={setSituacao} />
 

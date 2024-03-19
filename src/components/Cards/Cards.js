@@ -1,11 +1,26 @@
-import { FlatList, Text, Touchable, TouchableOpacity, View } from "react-native";
-import { BoxConsultasText, ButtonCardConsulta, CardConsulta, CardSubTitle, CardTitle, ContainerConsultas, ImageConsulta, ModalButton, TextCancel, TextVerProntuario } from "../Consultas/Style";
+import {
+  FlatList,
+  Text,
+  Touchable,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import {
+  BoxConsultasText,
+  ButtonCardConsulta,
+  CardConsulta,
+  CardSubTitle,
+  CardTitle,
+  ContainerConsultas,
+  ImageConsulta,
+  ModalButton,
+  TextCancel,
+  TextVerProntuario,
+} from "../Consultas/Style";
 import { BoxHorario } from "../BoxHoras/BoxHoras";
 import { ModalCancelar, ModalConsulta } from "../Modal/Modal";
 import { useState } from "react";
-
-
-
+import { AntDesign } from "@expo/vector-icons";
 
 export const Cards = ({ situacao, navigation, setPaciente }) => {
   const lista = [
@@ -75,9 +90,7 @@ export const Cards = ({ situacao, navigation, setPaciente }) => {
                 <ButtonCardConsulta
                   onPress={() => setShowModalVerLocalizacao(true)}
                 >
-                  <ImageConsulta
-                    source={require("../../assets/roberto.png")}
-                  />
+                  <ImageConsulta source={require("../../assets/roberto.png")} />
 
                   <BoxConsultasText>
                     <CardTitle>{obj.name}</CardTitle>
@@ -103,7 +116,7 @@ export const Cards = ({ situacao, navigation, setPaciente }) => {
 
           if (obj.situacao === "agendadas" && obj.situacao === situacao) {
             return (
-              // Consultas que foram Agendadas 
+              // Consultas que foram Agendadas
 
               <CardConsulta>
                 <ButtonCardConsulta

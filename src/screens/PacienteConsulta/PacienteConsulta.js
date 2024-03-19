@@ -8,6 +8,7 @@ import { Situacao } from "../../components/Consultas/Consultas";
 import { Cards } from "../../components/Cards/Cards";
 import { ButtonAgendar, ContainerButtonAgendar } from "../../components/ButtonIcons/Style";
 import { ModalAgendarConsulta } from "../../components/Modal/Modal";
+import { CalendarHome } from "../../components/CalendarHome/CalendarHome";
 
 
 export const PacienteConsulta = () => {
@@ -19,7 +20,7 @@ export const PacienteConsulta = () => {
   
         <Header/>
   
-        <Calendar />
+        <CalendarHome />
   
       <Situacao situacao={state} setSituacao={setState} />
   
